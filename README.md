@@ -42,9 +42,18 @@ And then, to run locally
     - If user does, but password incorrect
     - If user does and password correct
 
-2. Write a feature test for a user signing up twice with the same email, and a unit test for validating uniqueness of email property
 
-3. Write a feature test for a user using a password of at least 6 characters, and a unit test for validating this
+2. Write
+  - **First**, a feature test asserting that a user can't sign up twice with the same email
+  - and a unit test for validating uniqueness of email property
+  - and **then** implement it
+
+
+3. Write
+  - **First**, a feature test for a user using a password of at least 6 characters,
+  - and a unit test for validating this
+  - and **then** implement it
+
 
 #### Resources
 - [DataMapper Validations](http://datamapper.org/docs/validations.html)
