@@ -12,7 +12,7 @@ RSpec.feature 'User Authentication' do
   end
 
   context 'Sign in/out' do
-    let!(:user) { User.create(email: 'test@test.com', password: 'secret123')}
+    let!(:user) { User.create(email: 'test@test.com', password: 'secret123') }
 
     scenario 'A user can signin' do
       visit '/'
@@ -34,6 +34,19 @@ RSpec.feature 'User Authentication' do
       expect(page.current_path).to eq '/'
       expect(page).to have_content 'Sign up'
       expect(page).to have_content 'Sign in'
+    end
+  end
+
+  context 'Welcome page' do
+    scenario 'A user has two options, to either book or list' do
+      visit '/'
+      click_on 'Sign up'
+      fill_in :email, with: 'test@test.com'
+      fill_in :password, with: 'secret123'
+      click_button 'Sign up'
+
+      expect(page).to have_button 'Book'
+      expect(page).to have_button 'List'
     end
   end
 end

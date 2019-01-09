@@ -12,7 +12,13 @@
 
     <h1>Welcome, <%= current_user.email %>!</h1>
 
-    <h2>Your info</h2>
-    <p>email: <%= current_user.email %></p>
+    <form action="/book" method="get">
+      <input type="submit" name="Book" value="Book">
+    </form>
+
+    <form action="/list" method="get">
+      <input type="submit" name="List" value="List">
+    </form>
+
   </body>
 </html>
