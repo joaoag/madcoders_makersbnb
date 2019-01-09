@@ -2,6 +2,7 @@ ENV['RACK_ENV'] = 'development'
 
 require 'sinatra/base'
 require './config/data_mapper'
+require 'pry'
 
 class MakersBnb < Sinatra::Base
   enable :sessions
@@ -17,6 +18,11 @@ class MakersBnb < Sinatra::Base
     else
       redirect 'signin'
     end
+  end
+
+  post '/profile' do
+    venue = Venue.create
+    redirect '/'
   end
 
   get '/signup' do

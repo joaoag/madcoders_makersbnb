@@ -51,16 +51,30 @@ RSpec.feature 'User Authentication' do
   end
 
   context 'List page' do
-    scenario 'A user can add a property' do
+    scenario 'A user can access add property page' do
       visit '/'
       click_on 'Sign up'
       fill_in :email, with: 'test@test.com'
       fill_in :password, with: 'secret123'
       click_button 'Sign up'
       click_button 'List'
-
       expect(page.current_path).to eq '/list'
       expect(page).to have_content 'Add property'
+    end
+    scenario 'A user can access add property page' do
+      visit '/'
+      click_on 'Sign up'
+      fill_in :email, with: 'test@test.com'
+      fill_in :password, with: 'secret123'
+      click_button 'Sign up'
+      click_button 'List'
+      fill_in :name, with: 'Oak tavern'
+      fill_in :address, with: '1 Oak tavern Street'
+      fill_in :ppn, with: '£20'
+      fill_in :description, with: 'Best flat/tavern for getting pissed'
+      click_button 'Add'
+      expect(page.current_path).to eq '/'
+      expect(page).to have_content 'Oak tavern'
     end
   end
 end
