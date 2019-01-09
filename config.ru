@@ -1,3 +1,3 @@
 require './app'
 
-run UserAuth
+run MakersBnb

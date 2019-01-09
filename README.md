@@ -1,83 +1,146 @@
-# Simple User Authentication
+# madcoders_makersbnb
+# Makersbnb
 
-## Quickstart
 
-First, clone this repository
+## High level description
+This is a clone of AirBnb
 
-```bash
-> git clone https://github.com/makersacademy/simple_user_auth.git
-> cd simple_user_auth
-> bundle install
+
+## How to collaborate
+
+* clone this repo
+
+* etc
+
+* blah
+
+* blah
+
+
+
+## User stories
 ```
-Then, create the development and test databases
+As a user
+So that I can list properties
+I need to be able to sign up
 ```
-> createdb user_auth_development
-> createdb user_auth_test
-> rake db:auto_migrate
-> rake db:auto_migrate RACK_ENV=test
 ```
-And then, to run locally
+As a user
+So I can access my account
+I need to be able to sign in
 ```
-> rackup # Start the server at localhost:9292
+```
+As a user
+So I can leave my account
+I need to be able to sign out
+```
+```
+As a user
+So that I can have guests
+I need to be able to list a new space
+```
+```
+As a user
+So I can have guests at multiple locations
+I need to be able to list multiple spaces
+```
+```
+As a user
+So I can describe the space and price to my guests
+I need to be able to put title, describe space and give £ per night
+```
+```
+As a user
+So guests know when they can stay
+I need to be able to display a range of dates where the space is available
+```
+```
+As a user
+So that I can stay at a property
+I need to be able to book
+```
+```
+As a user
+So that I can stay at a property
+I need to be able to be approved by the owner
+```
+```
+As a user
+So that I can vet my guests
+I want to have the option of approving or denying user requests to stay
+```
+```
+As a user
+So that I don’t double-book guests
+I want to be able to block that date from being booked
+```
+```
+As a user
+So that I can keep the space open until it’s been booked
+I want to be have the space open for booking until the guest approves
 ```
 
-## To run tests
-```
-> bundle exec rspec
-```
-
-# Instructions
 
 
-### 1. Diagramming
+### High level skills used in this project
 
-1. Diagram the flow of data through this application by writing down the sequence of line numbers for each line of code that gets executed (in order) for each of the three feature specs
+To guide your learning, aim to be able to answer "yes" to the questions below.  Return to these questions each day to guide your learning.
 
-2. Find another pair and compare your work
+* Using the [XP values](#xp-values) to guide your behaviour
 
-### 2. Specs
+* Following the full [developer workflow](#development-workflow)? (Creating issues, branching, reviewing, squirrelling, merging.)
 
-1. Write specs for `User.authenticate`
-    - if user doesn’t exist
-    - If user does, but password incorrect
-    - If user does and password correct
+* Keeping code quality and test coverage high whilst building new features?
 
 
-2. Write
-  - **First**, a feature test asserting that a user can't sign up twice with the same email
-  - and a unit test for validating uniqueness of email property
-  - and **then** implement it
+### Specification and mockups
+
+The project will be built from this [specification and mockups](./specification_and_mockups.md).
+
+### Minimum viable product (MVP)
+
+The smallest thing that implements the core idea.  Think about what this is for Airbnb.  Build those user stories first.  This MVP will **exclude** most of the headline specification items in the spec.
+
+If your specification asks for a car, don't build the wheels in the first week, the doors in the second week, etc.  The customer can't try it! Instead, build a skateboard in the first week.
+
+*Aim to get to your MVP by the end of Thursday*.
+
+### XP values
+
+[XP values](http://www.extremeprogramming.org/values.html).  Use these to guide your behaviour on everything from class design to your standups.  If you get these behaviours right, everything else about being a software developer falls into place.
 
 
-3. Write
-  - **First**, a feature test for a user using a password of at least 6 characters,
-  - and a unit test for validating this
-  - and **then** implement it
+### Turning a specification into user stories
 
+* Make sure each user story is small enough to be completable in less than half a day.
+* Some items in the spec include more than one feature. e.g. "Any signed up user can list a new space". Break this into two user stories and prioritise the one that gets you as close as possible to a product.
+* Use the customer's language (the domain language) in the user stories.  Most words in the user stories should appear in the spec.
 
-#### Resources
-- [DataMapper Validations](http://datamapper.org/docs/validations.html)
+### Advice
 
-### 3. Flash Messages
+* Run team standups every morning and team retrospectives at the end of every day.  The only groups who say this week wasn't awesome are the ones who didn't do standups and retros.
 
-1. Update one feature spec at a time to assert that the user is shown helpful messages, and then implement it.
-  - A user should be shown information about why they succeeded or failed at signing up or in.
+* Focus on getting a [minimum viable product](#minimum-viable-product-mvp) first.
 
-#### Resources
-- [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
+* If you want to take this week to learn a new tech, great! Remember that this will also make things harder because it will make it harder to focus on the high level skills of the week.
 
-### 4. Restful Routes
+* Use this week to practice skills from the first five weeks that you feel you're weaker on.
 
-1. Read [this snippet](https://github.com/makersacademy/course/blob/master/pills/rest.md) and play around with this interactive tool https://sjmog.github.io/rest.
+### Development workflow
 
-2. Rename the routes in this app to be restful and then separate `app.rb` into controllers that deal with one resource
-    - Conventionally
-        - Registrations controller ( get/post signup) eg: `get ‘/registrations/new’`, `post ‘/registrations`
-        - Sessions controller (get/post signin/out)
-        - Home controller ( get index)
-        - App controller ( helper methods)
+1. Turn the spec into user stories.
+2. Create one GitHub issue for each user story.
+3. Pick the most important user story and follow this [development workflow](../pills/development_workflow.md).
+4. Return to step 3.
 
-### 5. Further
+### Project setup
 
-1. Add user auth to your messaging app.
-2. See Ed
+1. One member in your group, create a GitHub repo for your Makersbnb project.
+2. Add the other members of your group as collaborators.
+3. Add a README that has:
+   * A description of the high level description of the spec.
+   * A user stories section.
+4. Start turning the [specification into user stories](#turning-a-specification-into-user-stories).
+5. Create a branch.
+6. Add the user stories to the README.
+7. Use the [developer workflow](#developer-workflow) to get the README merged into master.

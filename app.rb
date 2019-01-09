@@ -3,7 +3,7 @@ ENV['RACK_ENV'] = 'development'
 require 'sinatra/base'
 require './config/data_mapper'
 
-class UserAuth < Sinatra::Base
+class MakersBnb < Sinatra::Base
   enable :sessions
   enable :method_override
 
