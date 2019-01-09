@@ -52,6 +52,10 @@ class MakersBnb < Sinatra::Base
     redirect '/'
   end
 
+  get '/list' do
+    erb :list
+  end
+
   private
 
   def signed_in?

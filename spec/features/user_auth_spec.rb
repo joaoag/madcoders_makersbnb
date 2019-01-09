@@ -49,4 +49,18 @@ RSpec.feature 'User Authentication' do
       expect(page).to have_button 'List'
     end
   end
+
+  context 'List page' do
+    scenario 'A user can add a property' do
+      visit '/'
+      click_on 'Sign up'
+      fill_in :email, with: 'test@test.com'
+      fill_in :password, with: 'secret123'
+      click_button 'Sign up'
+      click_button 'List'
+
+      expect(page.current_path).to eq '/list'
+      expect(page).to have_content 'Add property'
+    end
+  end
 end
