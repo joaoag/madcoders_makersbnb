@@ -29,16 +29,16 @@ As a user... (format!)
 
 To guide your learning, aim to be able to answer "yes" to the questions below.  Return to these questions each day to guide your learning.
 
-* Can you use the [XP values](#xp-values) to guide your behaviour?
+* Using the [XP values](#xp-values) to guide your behaviour
 
-* Can you follow the full [developer workflow](#development-workflow)? (Creating issues, branching, reviewing, squirrelling, merging.)
+* Following the full [developer workflow](#development-workflow)? (Creating issues, branching, reviewing, squirrelling, merging.)
 
-* Can you keep code quality and test coverage high whilst building new features?
+* Keeping code quality and test coverage high whilst building new features?
 
 
 ### Specification and mockups
 
-Build your project from this [specification and mockups](./specification_and_mockups.md).
+The project will be built from this [specification and mockups](./specification_and_mockups.md).
 
 ### Minimum viable product (MVP)
 
@@ -46,7 +46,7 @@ The smallest thing that implements the core idea.  Think about what this is for 
 
 If your specification asks for a car, don't build the wheels in the first week, the doors in the second week, etc.  The customer can't try it! Instead, build a skateboard in the first week.
 
-*Aim to get to your MVP by the end of Tuesday*.
+*Aim to get to your MVP by the end of Thursday*.
 
 ### XP values
 
@@ -89,4 +89,3 @@ If your specification asks for a car, don't build the wheels in the first week, 
 7. Use the [developer workflow](#developer-workflow) to get the README merged into master.
 
 
-![Tracking pixel](https://githubanalytics.herokuapp.com/course/makersbnb/README.md)
