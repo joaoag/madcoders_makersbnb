@@ -10,7 +10,7 @@ This is a clone of AirBnb
 
 * clone this repo
 
-* blah
+* etc
 
 * blah
 
@@ -19,9 +19,56 @@ This is a clone of AirBnb
 
 
 ## User stories
-
-As a user... (format!)
-
+```
+As a user
+So that I can list properties
+I need to be able to sign up
+```
+```
+As a user
+So that I can have guests
+I need to be able to list a new space
+```
+```
+As a user
+So I can have guests at multiple locations
+I need to be able to list multiple spaces
+```
+```
+As a user
+So I can describe the space and price to my guests
+I need to be able to put title, describe space and give £ per night
+```
+```
+As a user
+So guests know when they can stay
+I need to be able to display a range of dates where the space is available
+```
+```
+As a user
+So that I can stay at a property
+I need to be able to book
+```
+```
+As a user
+So that I can stay at a property
+I need to be able to be approved by the owner
+```
+```
+As a user
+So that I can vet my guests
+I want to have the option of approving or denying user requests to stay
+```
+```
+As a user
+So that I don’t double-book guests
+I want to be able to block that date from being booked
+```
+```
+As a user
+So that I can keep the space open until it’s been booked
+I want to be have the space open for booking until the guest approves
+```
 
 
 
