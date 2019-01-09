@@ -26,6 +26,16 @@ I need to be able to sign up
 ```
 ```
 As a user
+So I can access my account
+I need to be able to sign in
+```
+```
+As a user
+So I can leave my account
+I need to be able to sign out
+```
+```
+As a user
 So that I can have guests
 I need to be able to list a new space
 ```
