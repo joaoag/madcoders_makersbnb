@@ -2,6 +2,7 @@
   "RSpec": {
     "coverage": {
       "/Users/joaoabbott-gribben/projects/makers_bnb/madcoders_makersbnb/spec/features/user_auth_spec.rb": [
+
         1,
         null,
         1,
@@ -58,11 +59,14 @@
         1,
         1,
         1,
+
+
         null,
         null,
         null
       ]
     },
+
     "timestamp": 1547121841
   }
 }

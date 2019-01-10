@@ -15,6 +15,7 @@
     </div>
     <div id="wrapper" style="display:none;">
       <div class="timestamp">Generated <abbr class="timeago" title="2019-01-10T12:04:01+00:00">2019-01-10T12:04:01+00:00</abbr></div>
+     master
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -393,53 +394,63 @@
         <li class="covered" data-hits="1" data-linenumber="51">
           <span class="hits">1</span>
           
-          <code class="ruby">      click_button &#39;Add&#39;</code>
+          <code class="ruby">      fill_in :start_date, with: &#39;01/03/2019&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="52">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(page.current_path).to eq &#39;/profile&#39;</code>
+          <code class="ruby">      fill_in :end_date, with: &#39;23/03/2019&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(page).to have_content &#39;Oak tavern&#39;</code>
+          <code class="ruby">      click_button &#39;Add&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(page).to have_content &#39;1 Oak tavern Street&#39;</code>
+          <code class="ruby">      expect(page.current_path).to eq &#39;/profile&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(page).to have_content 20</code>
+          <code class="ruby">      expect(page).to have_content &#39;Oak tavern&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
+          <code class="ruby">      expect(page).to have_content &#39;1 Oak tavern Street&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(page).to have_content 20</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="82">
+          <span class="hits">1</span>
+          
           <code class="ruby">      expect(page).to have_content &#39;Best flat/tavern for getting pissed&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
-          
+        <li class="never" data-hits="" data-linenumber="57">         
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
-          
+        <li class="never" data-hits="" data-linenumber="58">          
           
           <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
-          
+         
           
           <code class="ruby">end</code>
         </li>
