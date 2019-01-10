@@ -1,16 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/celinekaslin/Desktop/MakersProject/week5/team_project/madcoders_makersbnb/spec/features/user_auth_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+      "/Users/joaoabbott-gribben/projects/makers_bnb/madcoders_makersbnb/spec/features/user_auth_spec.rb": [
+
         1,
         null,
+        1,
+        1,
+        1,
+        1,
         1,
         null,
         null,
@@ -21,16 +19,8 @@
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        null,
-        1,
         null,
         null,
-        1,
-        1,
-        1,
         1,
         1,
         1,
@@ -46,18 +36,9 @@
         1,
         1,
         1,
-        1,
-        1,
-        null,
-        1,
-        1,
         null,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
         1,
         1,
         1,
@@ -78,18 +59,14 @@
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
+
+
         null,
         null,
         null
       ]
     },
-    "timestamp": 1547131723
+
+    "timestamp": 1547121841
   }
 }
