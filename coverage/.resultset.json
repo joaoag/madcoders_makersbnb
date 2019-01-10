@@ -1,16 +1,13 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/alinagoaga/Desktop/skills-workshops/week-5/madcoders_makersbnb/spec/features/user_auth_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+      "/Users/joaoabbott-gribben/projects/makers_bnb/madcoders_makersbnb/spec/features/user_auth_spec.rb": [
         1,
         null,
+        1,
+        1,
+        1,
+        1,
         1,
         null,
         null,
@@ -21,16 +18,8 @@
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        null,
-        1,
         null,
         null,
-        1,
-        1,
-        1,
         1,
         1,
         1,
@@ -46,11 +35,6 @@
         1,
         1,
         1,
-        1,
-        1,
-        null,
-        1,
-        1,
         null,
         null,
         null,
@@ -60,15 +44,7 @@
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
         null,
-        1,
-        1,
-        1,
-        1,
         1,
         1,
         1,
@@ -87,6 +63,6 @@
         null
       ]
     },
-    "timestamp": 1547070595
+    "timestamp": 1547121841
   }
 }
