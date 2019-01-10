@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/alinagoaga/Desktop/skills-workshops/week-5/madcoders_makersbnb/spec/features/user_auth_spec.rb": [
+      "/Users/celinekaslin/Desktop/MakersProject/week5/team_project/madcoders_makersbnb/spec/features/user_auth_spec.rb": [
         1,
         1,
         1,
@@ -82,11 +82,14 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1547070595
+    "timestamp": 1547131723
   }
 }

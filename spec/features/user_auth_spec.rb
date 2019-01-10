@@ -72,6 +72,8 @@ RSpec.feature 'User Authentication' do
       fill_in :address, with: '1 Oak tavern Street'
       fill_in :ppn, with: '20'
       fill_in :description, with: 'Best flat/tavern for getting pissed'
+      fill_in :start_date, with: '01/03/2019'
+      fill_in :end_date, with: '23/03/2019'
       click_button 'Add'
       expect(page.current_path).to eq '/profile'
       expect(page).to have_content 'Oak tavern'
@@ -80,4 +82,5 @@ RSpec.feature 'User Authentication' do
       expect(page).to have_content 'Best flat/tavern for getting pissed'
     end
   end
+
 end

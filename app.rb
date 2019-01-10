@@ -14,7 +14,7 @@ class MakersBnb < Sinatra::Base
 
   get '/profile' do
     if signed_in?
-      @venues = Venue.all
+      @venues = current_user.venues
       erb :profile
     else
       redirect 'signin'
@@ -22,7 +22,10 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/profile' do
-    venue = Venue.create(name: params[:name], address: params[:address], ppn: params[:ppn], description: params[:description], user: current_user)
+    listing = Listing.create(start_date: params[:start_date], end_date: params[:end_date])
+
+    venue = Venue.create(name: params[:name], address: params[:address], ppn: params[:ppn], description: params[:description], user: current_user, listing: listing)
+
     redirect '/profile'
   end
 
