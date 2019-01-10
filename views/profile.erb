@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <form action="/sessions" method="post">
-      <input type="hidden" name="_method" value="delete">
-      <input type="submit" value="Log out">
-    </form>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <form action="/sessions" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Log out">
+  </form>
 
-    <h1>Welcome, <%= current_user.email %>!</h1>
+  <h1>Welcome, <%= current_user.email %>!</h1>
 
-    <form action="/book" method="get">
-      <input type="submit" name="Book" value="Book">
-    </form>
+  <form action="/book" method="get">
+    <input type="submit" name="Book" value="Book">
+  </form>
 
-    <form action="/list" method="get">
-      <input type="submit" name="List" value="List">
-    </form>
+  <form action="/list" method="get">
+    <input type="submit" name="List" value="List">
+  </form>
 
-  </body>
+  <div>
+    <% @venues.each do |venue| %>
+    <%= venue.name %>
+    <%= venue.address %>
+    <%= venue.ppn %>
+    <%= venue.description %>
+    <% end %>
+  </div>
+
+</body>
 </html>

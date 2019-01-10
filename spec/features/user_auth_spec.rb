@@ -70,11 +70,14 @@ RSpec.feature 'User Authentication' do
       click_button 'List'
       fill_in :name, with: 'Oak tavern'
       fill_in :address, with: '1 Oak tavern Street'
-      fill_in :ppn, with: '£20'
+      fill_in :ppn, with: '20'
       fill_in :description, with: 'Best flat/tavern for getting pissed'
       click_button 'Add'
-      expect(page.current_path).to eq '/'
+      expect(page.current_path).to eq '/profile'
       expect(page).to have_content 'Oak tavern'
+      expect(page).to have_content '1 Oak tavern Street'
+      expect(page).to have_content 20
+      expect(page).to have_content 'Best flat/tavern for getting pissed'
     end
   end
 end
