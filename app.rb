@@ -66,6 +66,27 @@ class MakersBnb < Sinatra::Base
     erb :list
   end
 
+  get '/book' do
+    erb :book
+  end
+
+  post '/book/results' do
+    listing = Listing.create(start_date: params[:start_date], end_date: params[:end_date])
+    session[:listing] = listing.id
+    redirect '/book/results'
+  end
+
+  get '/book/results' do
+    listing_id = session[:listing]
+    listing = Listing.get!(listing_id)
+    @results = listing.venues
+    binding.pry
+    erb :book_results
+  end
+
+
+
+
   private
 
   def signed_in?

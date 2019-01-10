@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  
+  <h1> Properties available for your selected dates </h1>
+
+  <div>
+    <% @results.each do |venue| %>
+    <%= venue.name %>
+    <%= venue.address %>
+    <%= venue.ppn %>
+    <%= venue.description %>
+    <% end %>
+  </div>
+
+</body>
+</html>

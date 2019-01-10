@@ -58,5 +58,35 @@ RSpec.feature 'User Authentication' do
       expect(page).to have_content 'Best flat/tavern for getting pissed'
     end
   end
+  context 'Book page (view available venues)' do
+      before do
+      sign_up
+      click_button 'List'
+      fill_in :name, with: 'Oak tavern'
+      fill_in :address, with: '1 Oak tavern Street'
+      fill_in :ppn, with: '20'
+      fill_in :description, with: 'Best flat/tavern for getting pissed'
+      fill_in :start_date, with: '01/03/2019'
+      fill_in :end_date, with: '23/03/2019'
+      click_button 'Add'  
+      click_button 'Log out'
+      end
 
+      scenario 'User can see venues available on their search dates' do
+      visit '/' 
+      click_on 'Sign up'
+      fill_in :email, with: 'hello@hello.com'
+      fill_in :password, with: 'password123'
+      click_button 'Sign up'
+      click_button 'Book'
+      fill_in :start_date, with: '01/03/2019'
+      fill_in :end_date, with: '23/03/2019'
+      click_button 'Search'
+      expect(page.current_path).to eq '/book'
+      expect(page).to have_content 'Oak tavern'
+      expect(page).to have_content '1 Oak tavern Street'
+      expect(page).to have_content 20
+      expect(page).to have_content 'Best flat/tavern for getting pissed'
+    end
+  end
 end
