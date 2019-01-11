@@ -1,11 +1,15 @@
-
+  <div>
   <form action="/sessions" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Log out">
   </form>
+  </div>
 
+  <div>
   <h1>Welcome, <%= current_user.email %>!</h1>
+  </div>
 
+  <div>
   <form action="/book" method="get">
     <input type="submit" name="Book" value="Book">
   </form>
@@ -13,7 +17,9 @@
   <form action="/list" method="get">
     <input type="submit" name="List" value="List">
   </form>
+  </div>
 
+  <div>
   <% @venues.each do |venue| %>
   <dl>
     <dt><%= venue.name %></dt>
@@ -22,5 +28,4 @@
     <dd><%= venue.description %></dd>
   </dl>
   <% end %>
-
-
+  </div>
