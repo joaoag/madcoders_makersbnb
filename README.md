@@ -171,14 +171,14 @@ You can check all the files in one go:
 $ cd madcoders_makersbnb
 $ rspec
 ```
-You can check only one file at a time :
+To check only one file at a time :
 
 ```shell
 $ cd madcoders_makersbnb
 $ rspec spec/file_name_spec.rb
 ```
 
-2. Check that the code respect the quality of the *Rubocop* guideline, by running `rubocop` from the *madcoders_makersbnb* directory :
+2. Check that the code respects the quality of the *Rubocop* guideline, by running `rubocop` from the *madcoders_makersbnb* directory :
 
 ```shell
 $ cd madcoders_makersbnb
@@ -200,11 +200,14 @@ You'll be able to see that the localhost port used is *9292*
 
 2. click on sign_in, enter your email address and password and click on `Sign in`.<br/>
 
-3. Choose what you would like to do : list a property or book one (better to start by listing one to have some data in your DB).<br/>
-You can then log out and create as many users as you wish and add as many properties as you wish, with many different availabilities.<br/>
-Then you can log out, and with one of the existing user (or by creating a new one) you can go on the book section and search for available properties for the dates that you would like to.
+3. Now click on list and create some properties.<br/>
 
-4. Enjoy playing around with our app as much as you want :slighty_smiling_face:
+4. Log out, and do the first three steps with a new user. You can repeat these steps as many as you want.<br/>
+
+5. Log out, and sign in or sign up. Go on the book section and search for available properties for the dates that you would like to.<br/>
+Click on the `request` button in front of the property you would like to book.
+
+6. Enjoy playing around with our app as much as you want :slighty_smiling_face: !
 
 
 ## Authors ##
