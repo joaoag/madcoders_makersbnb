@@ -39,7 +39,7 @@ RSpec.feature 'User Authentication' do
       sign_up
       click_button 'List'
       expect(page.current_path).to eq '/list'
-      expect(page).to have_content 'Add property'
+      expect(page).to have_content 'Add a new property!'
     end
     scenario 'A user can access add property page' do
       sign_up
