@@ -1,21 +1,21 @@
   <div>
   <form action="/sessions" method="post">
     <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Log out">
+    <input class="btn btn-dark" type="submit" value="Log out">
   </form>
   </div>
 
-  <div>
+  <div style = "margin: 3em">
   <h1>Welcome, <%= current_user.email %>!</h1>
   </div>
 
-  <div>
-  <form action="/book" method="get">
-    <input type="submit" name="Book" value="Book">
+  <div style = "margin-bottom: 3em">
+  <form action="/book" method="get" style = "margin-bottom: 1em">
+    <input class="btn btn-secondary" type="submit" name="Book" value="Book">
   </form>
 
   <form action="/list" method="get">
-    <input type="submit" name="List" value="List">
+    <input class="btn btn-secondary" type="submit" name="List" value="List">
   </form>
   </div>
 
@@ -24,8 +24,8 @@
   <dl>
     <dt><%= venue.name %></dt>
     <dd><%= venue.address %></dd>
-    <dd>£<%= venue.ppn %></dd>
-    <dd><%= venue.description %></dd>
+    <dd>Price per night: £<%= venue.ppn %></dd>
+    <dd style = "margin-bottom: 2em"><%= venue.description %></dd>
   </dl>
   <% end %>
   </div>
