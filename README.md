@@ -1,24 +1,10 @@
-# madcoders_makersbnb
-# Makersbnb
+# madcoders_makersbnb #
+# Makersbnb #
 
+## Project ##
 
-## High level description
-This is a clone of AirBnb
+We are building a web app similar to the Airbnb one, based on the following user story.<br/>
 
-
-## How to collaborate
-
-* clone this repo
-
-* etc
-
-* blah
-
-* blah
-
-
-
-## User stories
 ```
 As a user
 So that I can list properties
@@ -80,72 +66,155 @@ So that I can keep the space open until it’s been booked
 I want to be have the space open for booking until the guest approves
 ```
 
+## Our approach ##
+
+This project is done in a team of 3 people.<br/>
+We are using those high level skills :<br/>
+1. [XP values](#xp-values) to guide your behaviour<br/>
+2. The full [developer workflow](#development-workflow) (Creating issues, branching, reviewing, squirrelling, merging.<br/>
+3. Keeping code quality and test coverage using *Rspec*, *Capybara*, *simpleCov*, *Rubocop*<br/>
+4. Agile process (diagram, morning stand up, afternoon retro)*
+
+We build our CRC Model based on the user story as following.<br/>
+
+![CRC model](https://user-images.githubusercontent.com/43742795/51039457-44d75900-15ad-11e9-8328-28f7f9f5d4d1.png)
+
+Due to the short time we had to build the app, we decide to prioritise what was Minimum viable product by building our MVP as following :<br/>
+
+1. User is able to sign_up
+2. User is able to sign_out
+3. User is able to sign_in
+4. User is able to choose on his profile page if he wishes to list or book a property (list and book button on profile page)
+5. In case of list, user is redirected on list page and is able to fulfil a form about the property he wishes to list.
+6. User is able to add the date of the availability for this property
+7. User can see on his profile page the list of the properties that he have listed
+8. In case of book, useris redirected on a book page, where he is able to enter the dates he wishes to book a property
+9. User click on search and a list of the available properties matching his dates is displayed
+10. User is able to click on a property to book it and is redirect on a page where he can see a message letting him know that the owner will have to approve his booking.<br/>
+
+The project has been build from this ![mockup](https://user-images.githubusercontent.com/43742795/51042620-a4853280-15b4-11e9-98e3-cc1a6ed273b5.png).
+
+## How to use ##
+
+### Set up ###
+
+1. clone the repo<br/>
+Under the repo name click *clone or download*<br/>
+Click on *use HTTPs*, copy the clone URL of the repo<br/>
+In the terminal go on the working directory where you want the cloned directory to be<br/>
+Use the `git clone` command and paste the clone URL then press enter :
+
+```shell
+$ git clone https://github.com/your-username/your-repositary.git
+```
+
+2. On your local machine go inside of the *madcoders_makersbnb* directory :
+
+```shell
+$ cd madcoders_makersbnb
+```
+3. To install all the *gems* contained in the *Gemfile*, install and run *Bundle* :
+Install :
+
+```shell
+$ install bundle
+```
+Run:
+
+```shell
+$ bundle
+```
+4. You can see the different directories, with the `ls` command.
+
+### Database ###
+
+5. If you do not have it already, install *psql* on your local machine. Connect to your database and create two of them to be able to run the test and the app.<br/>
+Make one called *makers_bnb_development* and one called *makers_bnb_test*.<br/>
+
+```shell
+$ psql
+admin= CREATE DATABASE makers_bnb_development;
+admin= CREATE DATABASE makers_bnb_test;
+```
+
+6. Exit from psql and from the command line run the `rake` command followed by the `db:auto_migrate` command. This will create your tables in your development DB.<br/>
+
+```shell
+$ rake db:auto_migrate
+```
+
+7. From the command line run the `rake` command followed by the `db:auto_migrate RACK_ENV=test` command. This will create your tables in your test DB.<br/>
+
+```shell
+$ rake db:auto_migrate RACK_ENV=test
+```
+
+8. Connect to psql and connect to your database using the `\c databasename` command.<br/>
+Once you are connected to the database you choose, you can list the tables using the `\dt` command.<br/>
+
+```shell
+$ psql
+admin= \c makers_bnb_development;
+makers_bnb_development= \dt
+```
+9. You can connect to a specific table by using the `SELECT * FROM tablename` command.<br/>
+
+```shell
+makers_bnb_development= SELECT * FROM tablename;
+```
+### Run the tests ###
+
+1. Check that the codes are passing the test. From the root *madcoders_makersbnb* directory, run the *spec*.<br/>
+You can check all the files in one goal:
+
+```shell
+$ cd madcoders_makersbnb
+$ rspec
+```
+You can check only one file at a time :
+
+```shell
+$ cd madcoders_makersbnb
+$ rspec spec/file_name_spec.rb
+```
+
+2. Check that the code respect the quality of the *Rubocop* guideline, by running `rubocop` from the *madcoders_makersbnb* directory :
+
+```shell
+$ cd madcoders_makersbnb
+$ rubocop
+```
+
+## Run the app ##
+
+1. On the command line, from the root directory *madcoders_makersbnb*, use the `rackup` command :
+
+```shell
+$ cd madcoders_makersbnb
+$ rackup
+```
+
+You'll be able to see that the localhost port used is *9292*
+
+1. Open your browser and type the url of your *localhost:9292*  <br/>
+
+2. click on sign_in, enter your email address and password and click on `Sign in`.<br/>
+
+3. Choose what you would like to do : list a property or book one (better to start by listing one to have some data in your DB).<br/>
+You can then log out and create as many users as you wish and add as many properties as you wish, with many different availabilities.<br/>
+Then you can log out, and with one of the existing user (or by creating a new one) you can go on the book section and search for available properties for the dates that you would like to.
+
+4. Enjoy playing around with our app as much as you want :slighty_smiling_face:
 
 
-### High level skills used in this project
+## Authors ##
 
-To guide your learning, aim to be able to answer "yes" to the questions below.  Return to these questions each day to guide your learning.
-
-* Using the [XP values](#xp-values) to guide your behaviour
-
-* Following the full [developer workflow](#development-workflow)? (Creating issues, branching, reviewing, squirrelling, merging.)
-
-* Keeping code quality and test coverage high whilst building new features?
+Our 3 fabulous *MadCoders* team members who collaborate to build this app :<br/>
+@AlinaGoaga <br/>
+@joaoag (João Abbott-Gribben)<br/>
+@CelineKaslin
 
 
-### Specification and mockups
+## Acknowledgements ##
 
-The project will be built from this [specification and mockups](./specification_and_mockups.md).
-
-### Minimum viable product (MVP)
-
-The smallest thing that implements the core idea.  Think about what this is for Airbnb.  Build those user stories first.  This MVP will **exclude** most of the headline specification items in the spec.
-
-If your specification asks for a car, don't build the wheels in the first week, the doors in the second week, etc.  The customer can't try it! Instead, build a skateboard in the first week.
-
-*Aim to get to your MVP by the end of Thursday*.
-
-### XP values
-
-[XP values](http://www.extremeprogramming.org/values.html).  Use these to guide your behaviour on everything from class design to your standups.  If you get these behaviours right, everything else about being a software developer falls into place.
-
-
-### Turning a specification into user stories
-
-* Make sure each user story is small enough to be completable in less than half a day.
-* Some items in the spec include more than one feature. e.g. "Any signed up user can list a new space". Break this into two user stories and prioritise the one that gets you as close as possible to a product.
-* Use the customer's language (the domain language) in the user stories.  Most words in the user stories should appear in the spec.
-
-### Advice
-
-* Run team standups every morning and team retrospectives at the end of every day.  The only groups who say this week wasn't awesome are the ones who didn't do standups and retros.
-
-* Focus on getting a [minimum viable product](#minimum-viable-product-mvp) first.
-
-* If you want to take this week to learn a new tech, great! Remember that this will also make things harder because it will make it harder to focus on the high level skills of the week.
-
-* Use this week to practice skills from the first five weeks that you feel you're weaker on.
-
-### Development workflow
-
-1. Turn the spec into user stories.
-2. Create one GitHub issue for each user story.
-3. Pick the most important user story and follow this [development workflow](../pills/development_workflow.md).
-4. Return to step 3.
-
-### Project setup
-
-1. One member in your group, create a GitHub repo for your Makersbnb project.
-2. Add the other members of your group as collaborators.
-3. Add a README that has:
-   * A description of the high level description of the spec.
-   * A user stories section.
-4. Start turning the [specification into user stories](#turning-a-specification-into-user-stories).
-5. Create a branch.
-6. Add the user stories to the README.
-7. Use the [developer workflow](#developer-workflow) to get the README merged into master.
-<<<<<<< HEAD
-=======
-
-
->>>>>>> c282ddce7b2b9212cd7c92d707f0c9651278909d
+Code from sign_in_sign up web app from @dearshrewdwit (Edward Withers)
