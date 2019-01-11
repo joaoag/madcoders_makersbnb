@@ -20,14 +20,14 @@
     <input type="submit" name="List" value="List">
   </form>
 
-  <div>
-    <% @venues.each do |venue| %>
-    <%= venue.name %>
-    <%= venue.address %>
-    <%= venue.ppn %>
-    <%= venue.description %>
-    <% end %>
-  </div>
+  <% @venues.each do |venue| %>
+  <dl>
+    <dt><%= venue.name %></dt>
+    <dd><%= venue.address %></dd>
+    <dd>£<%= venue.ppn %></dd>
+    <dd><%= venue.description %></dd>
+  </dl>
+  <% end %>
 
 </body>
 </html>

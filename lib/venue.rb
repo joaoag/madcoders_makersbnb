@@ -10,5 +10,5 @@ class Venue
   property :description, Text
 
   belongs_to :user
-  belongs_to :listing
+  has n, :availabilities
 end
