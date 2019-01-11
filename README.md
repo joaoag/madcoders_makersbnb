@@ -207,7 +207,7 @@ You'll be able to see that the localhost port used is *9292*
 5. Log out, and sign in or sign up. Go on the book section and search for available properties for the dates that you would like to.<br/>
 Click on the `request` button in front of the property you would like to book.
 
-6. Enjoy playing around with our app as much as you want :slighty_smiling_face: !
+6. Enjoy playing around with our app as much as you want :) 
 
 
 ## Authors ##
