@@ -73,6 +73,10 @@ class MakersBnb < Sinatra::Base
     erb :book
   end
 
+  get '/book/request' do
+    erb :request
+  end
+
   private
 
   def signed_in?

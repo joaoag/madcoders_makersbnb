@@ -20,10 +20,16 @@
 
     <% @venues.each do |venue| %>
     <dl>
-      <dt><%= venue.name %></dt>
-      <dd><%= venue.address %></dd>
-      <dd>£<%= venue.ppn %></dd>
-      <dd><%= venue.description %></dd>
+      <dt>Property name: <%= venue.name %></dt>
+      <dd>Address: <%= venue.address %></dd>
+      <dd>Price: £<%= venue.ppn %></dd>
+      <dd>Description: <%= venue.description %></dd>
+      <dd><% venue.availabilities.each do |availability| %></dd>
+      <dd>Start date: <%= availability.start_date.strftime("%d/%m/%Y") %></dd>
+      <dd>End date: <%= availability.end_date.strftime("%d/%m/%Y") %></dd>
+      <% end %>
+      <dd><a href=<%="/book/request"%>> Book this property </a>
+      </dd>
     </dl>
     <% end %>
 

@@ -72,7 +72,7 @@ RSpec.feature 'User Authentication' do
       click_button 'Log out'
     end
 
-    scenario 'User can see venues available on their search dates' do
+    scenario 'User can see venues available on their search dates and is able to send a booking request' do
       visit '/'
       click_on 'Sign up'
       fill_in :email, with: 'hello@hello.com'
@@ -87,6 +87,10 @@ RSpec.feature 'User Authentication' do
       expect(page).to have_content '1 Oak tavern Street'
       expect(page).to have_content 20
       expect(page).to have_content 'Best flat/tavern for getting pissed'
+      expect(page).to have_content '01/03/2019'
+      expect(page).to have_content '23/03/2019'
+      click_link 'Book this property'
+      expect(page).to have_content 'Thank you for your request, the owner will be in touch shortly!'
     end
   end
 end
