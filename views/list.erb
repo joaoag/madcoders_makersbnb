@@ -1,23 +1,25 @@
-<h3> Add property </h3>
+ <h2> Add a new property! </h2>
 
 <form action="/profile" method="post">
-      <label for="name">Property name:</label>
-      <input type="text" name="name">
+
+      <label for="name">Name:</label>
+      <div><input type="text" name="name"></div>
 
       <label for="address">Address:</label>
-      <input type="text" name="address">
+      <div><input type="text" name="address"></div>
 
       <label for="ppn">Price per night:</label>
-      <input type="text" name="ppn">
+      <div><input type="text" name="ppn"></div>
 
-      <label for="description">Property description:</label>
-      <input type="text" name="description">
+      <label for="description">Description:</label>
+      <div><input type="text" name="description"></div>
 
-      <label for="start_date">Start date:</label>
-      <input type="date" name="start_date">
+      <label for="start_date">Available from:</label>
+      <div><input type="date" name="start_date"></div>
 
-      <label for="end_date">End date:</label>
-      <input type="date" name="end_date">
+      <label for="end_date">Available until:</label>
+      <div><input type="date" name="end_date"></div>
 
-      <input type="submit" value="Add">
-    </form>
+      <input style = "margin-top: 1em" class="btn btn-secondary" type="submit" value="Add">
+
+</form>

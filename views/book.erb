@@ -6,32 +6,36 @@
 </head>
 <body>
 
-  <h1> Properties available for your selected dates </h1>
+  <h2 style = "margin-bottom: 1.5em"> Please insert the dates you're interested in, to see a list of available properties! </h2>
 
+  <div>
   <form action="/book" method="get">
     <label for="start_date">Start date:</label>
-      <input type="date" name="start_date">
+      <div><input type="date" name="start_date"></div>
 
       <label for="end_date">End date:</label>
-      <input type="date" name="end_date">
+      <div><input type="date" name="end_date"></div>
 
-      <input type="submit" value="Search">
+      <div><input style = "margin-top: 1em" class="btn btn-secondary" type="submit" value="Search"></div>
   </form>
+  </div>
 
+  <div style = "margin-top: 3em">
     <% @venues.each do |venue| %>
     <dl>
-      <dt>Property name: <%= venue.name %></dt>
-      <dd>Address: <%= venue.address %></dd>
-      <dd>Price: £<%= venue.ppn %></dd>
-      <dd>Description: <%= venue.description %></dd>
+      <dt><%= venue.name %></dt>
+      <dd><%= venue.address %></dd>
+      <dd>Price per night: £<%= venue.ppn %></dd>
+      <dd><%= venue.description %></dd>
       <dd><% venue.availabilities.each do |availability| %></dd>
-      <dd>Start date: <%= availability.start_date.strftime("%d/%m/%Y") %></dd>
-      <dd>End date: <%= availability.end_date.strftime("%d/%m/%Y") %></dd>
+      <dd>Available from: <%= availability.start_date.strftime("%d/%m/%Y") %></dd>
+      <dd>Available until: <%= availability.end_date.strftime("%d/%m/%Y") %></dd>
       <% end %>
-      <dd><a href=<%="/book/request"%>> Book this property </a>
+      <dd><a style = "margin-bottom: 1.5em" class="btn btn-secondary" href=<%="/book/request"%>> Book this property </a>
       </dd>
     </dl>
     <% end %>
+  </div>
 
 </body>
 </html>
