@@ -5,11 +5,10 @@
   <title></title>
 </head>
 <body>
-  
+
   <h1> Properties available for your selected dates </h1>
 
-  <form action="/book/results" method="post">
-    <input type="submit" name="Book" value="Book">
+  <form action="/book" method="get">
     <label for="start_date">Start date:</label>
       <input type="date" name="start_date">
 
@@ -18,6 +17,15 @@
 
       <input type="submit" value="Search">
   </form>
+
+    <% @venues.each do |venue| %>
+    <dl>
+      <dt><%= venue.name %></dt>
+      <dd><%= venue.address %></dd>
+      <dd>£<%= venue.ppn %></dd>
+      <dd><%= venue.description %></dd>
+    </dl>
+    <% end %>
 
 </body>
 </html>

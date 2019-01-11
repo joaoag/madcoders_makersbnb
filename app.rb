@@ -22,10 +22,8 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/profile' do
-    listing = Listing.create(start_date: params[:start_date], end_date: params[:end_date])
-
-    venue = Venue.create(name: params[:name], address: params[:address], ppn: params[:ppn], description: params[:description], user: current_user, listing: listing)
-
+    venue = Venue.create(name: params[:name], address: params[:address], ppn: params[:ppn], description: params[:description], user: current_user)
+    availability = Availability.create(start_date: params[:start_date], end_date: params[:end_date], venue: venue)
     redirect '/profile'
   end
 
@@ -67,25 +65,13 @@ class MakersBnb < Sinatra::Base
   end
 
   get '/book' do
+    if params[:start_date].nil?
+      @venues = Venue.all
+    else
+      @venues = Venue.all(availabilities: { :start_date.gte => params[:start_date], :end_date.lte => params[:end_date] })
+    end
     erb :book
   end
-
-  post '/book/results' do
-    listing = Listing.create(start_date: params[:start_date], end_date: params[:end_date])
-    session[:listing] = listing.id
-    redirect '/book/results'
-  end
-
-  get '/book/results' do
-    listing_id = session[:listing]
-    listing = Listing.get!(listing_id)
-    @results = listing.venues
-    binding.pry
-    erb :book_results
-  end
-
-
-
 
   private
 

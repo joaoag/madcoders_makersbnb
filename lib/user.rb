@@ -1,6 +1,6 @@
 require 'data_mapper'
 require_relative 'venue'
-require_relative 'listing'
+require_relative 'availability'
 
 class User
   include DataMapper::Resource

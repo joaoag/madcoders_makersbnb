@@ -59,7 +59,7 @@ RSpec.feature 'User Authentication' do
     end
   end
   context 'Book page (view available venues)' do
-      before do
+    before do
       sign_up
       click_button 'List'
       fill_in :name, with: 'Oak tavern'
@@ -68,12 +68,12 @@ RSpec.feature 'User Authentication' do
       fill_in :description, with: 'Best flat/tavern for getting pissed'
       fill_in :start_date, with: '01/03/2019'
       fill_in :end_date, with: '23/03/2019'
-      click_button 'Add'  
+      click_button 'Add'
       click_button 'Log out'
-      end
+    end
 
-      scenario 'User can see venues available on their search dates' do
-      visit '/' 
+    scenario 'User can see venues available on their search dates' do
+      visit '/'
       click_on 'Sign up'
       fill_in :email, with: 'hello@hello.com'
       fill_in :password, with: 'password123'
