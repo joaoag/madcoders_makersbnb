@@ -9,6 +9,7 @@ gem 'dm-postgres-adapter'
 gem 'pry'
 gem 'rake'
 gem 'sinatra'
+gem 'rubocop', '0.56.0'
 
 group :test do
   gem 'capybara'
