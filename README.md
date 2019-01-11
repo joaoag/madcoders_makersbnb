@@ -3,7 +3,7 @@
 
 ## Project ##
 
-We are building a web app similar to the Airbnb one, based on the following user story.<br/>
+We are building a web app similar to the Airbnb one, based on the following user stories.<br/>
 
 ```
 As a user
@@ -69,30 +69,30 @@ I want to be have the space open for booking until the guest approves
 ## Our approach ##
 
 This project is done in a team of 3 people.<br/>
-We are using those high level skills :<br/>
+We are using these high level skills :<br/>
 1. [XP values](#xp-values) to guide your behaviour<br/>
 2. The full [developer workflow](#development-workflow) (Creating issues, branching, reviewing, squirrelling, merging.<br/>
 3. Keeping code quality and test coverage using *Rspec*, *Capybara*, *simpleCov*, *Rubocop*<br/>
-4. Agile process (diagram, morning stand up, afternoon retro)*
+4. Agile processes (diagram, morning stand up, afternoon retro)*
 
-We build our CRC Model based on the user story as following.<br/>
+We built our CRC Model based on the user story as following.<br/>
 
 ![CRC model](https://user-images.githubusercontent.com/43742795/51039457-44d75900-15ad-11e9-8328-28f7f9f5d4d1.png)
 
-Due to the short time we had to build the app, we decide to prioritise what was Minimum viable product by building our MVP as following :<br/>
+Due to the short time we had to build the app, we decided to prioritise our Minimum Viable Product by building our MVP as following :<br/>
 
 1. User is able to sign_up
 2. User is able to sign_out
 3. User is able to sign_in
-4. User is able to choose on his profile page if he wishes to list or book a property (list and book button on profile page)
-5. In case of list, user is redirected on list page and is able to fulfil a form about the property he wishes to list.
+4. User is able to choose on their profile if they wish to list or book a property (list and book button on profile page)
+5. In the case of list, the user is redirected onto the list page and is able to fill a form about the property they wish to list.
 6. User is able to add the date of the availability for this property
-7. User can see on his profile page the list of the properties that he have listed
-8. In case of book, useris redirected on a book page, where he is able to enter the dates he wishes to book a property
-9. User click on search and a list of the available properties matching his dates is displayed
-10. User is able to click on a property to book it and is redirect on a page where he can see a message letting him know that the owner will have to approve his booking.<br/>
+7. User can see on their profile the list of the properties that they have listed
+8. In the case of book, user is redirected onto a book page, where they are able to enter the dates they wish to book a property
+9. User clicks on search and a list of the available properties matching their dates is displayed
+10. User is able to click on a property to book it and is redirected on a page where they can see a message letting them know that the owner will have to approve their booking.<br/>
 
-The project has been build from this ![mockup](https://user-images.githubusercontent.com/43742795/51042620-a4853280-15b4-11e9-98e3-cc1a6ed273b5.png).
+The project has been built from this ![mockup](https://user-images.githubusercontent.com/43742795/51042620-a4853280-15b4-11e9-98e3-cc1a6ed273b5.png).
 
 ## How to use ##
 
@@ -101,7 +101,7 @@ The project has been build from this ![mockup](https://user-images.githubusercon
 1. clone the repo<br/>
 Under the repo name click *clone or download*<br/>
 Click on *use HTTPs*, copy the clone URL of the repo<br/>
-In the terminal go on the working directory where you want the cloned directory to be<br/>
+In the terminal go on the working directory where you want to clone the project<br/>
 Use the `git clone` command and paste the clone URL then press enter :
 
 ```shell
@@ -128,7 +128,7 @@ $ bundle
 
 ### Database ###
 
-5. If you do not have it already, install *psql* on your local machine. Connect to your database and create two of them to be able to run the test and the app.<br/>
+5. If you do not have it already, install *psql* on your local machine. Connect to your database and create two of them to be able to run the test and the app, using the `CREATE DATABASE databasename;` command.<br/>
 Make one called *makers_bnb_development* and one called *makers_bnb_test*.<br/>
 
 ```shell
@@ -149,15 +149,15 @@ $ rake db:auto_migrate
 $ rake db:auto_migrate RACK_ENV=test
 ```
 
-8. Connect to psql and connect to your database using the `\c databasename` command.<br/>
-Once you are connected to the database you choose, you can list the tables using the `\dt` command.<br/>
+8. Connect to psql and connect to your database using the `\c databasename;` command.<br/>
+Once you are connected to the database you've chosen, you can list the tables using the `\dt` command.<br/>
 
 ```shell
 $ psql
 admin= \c makers_bnb_development;
 makers_bnb_development= \dt
 ```
-9. You can connect to a specific table by using the `SELECT * FROM tablename` command.<br/>
+9. You can connect to a specific table by using the `SELECT * FROM tablename;` command.<br/>
 
 ```shell
 makers_bnb_development= SELECT * FROM tablename;
@@ -165,7 +165,7 @@ makers_bnb_development= SELECT * FROM tablename;
 ### Run the tests ###
 
 1. Check that the codes are passing the test. From the root *madcoders_makersbnb* directory, run the *spec*.<br/>
-You can check all the files in one goal:
+You can check all the files in one go:
 
 ```shell
 $ cd madcoders_makersbnb
